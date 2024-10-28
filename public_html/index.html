@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="icon" href="img/kibirdy-logo.svg" type="image/x-icon">
+  <title>Kibirdy</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" />
+  <!-- MDB -->
+  <link rel="stylesheet" href="css/mdb.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Flatpickr -->
+  <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css"
+    integrity="sha512-MQXduO8IQnJVq1qmySpN87QQkiR1bZHtorbJBD0tzy7/0U9+YIC93QWHeGTEoojMVHWWNkoCp8V6OzVSYrX0oQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"
+    integrity="sha512-K/oyQtMXpxI4+K0W7H25UopjM8pzq0yrVdFdG21Fh5dBe91I40pDd9A4lzNlHPHBIP2cwZuoxaUSX0GJSObvGA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+  <section class="intro">
+    <div id="header-logo" class="p-5 text-left bg-body-tertiary d-flex align-items-center header-container">
+      <img class="logo-header" src="img/kibirdy-logo.svg" alt="Logo">
+      <div class="ml-3 logo-text">
+        <div class="header-text">Making Woo-Woo</div>
+        <div class="header-text">Mainstream</div>
+      </div>
+    </div>
+    <div class="mask d-flex align-items-center ">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div id="inputCard" class="col-lg-8 col-md-12 col-sm-12">
+            <div style="background-color: black;" class="card" style="border-radius: 1rem;" id="user-data-input-box">
+              <div class="card-body p-5 text-center row justify-content-start">
+
+                <div class="my-md-3 pb-3">
+
+
+                  <h2 style="color: white;" class="fw-bold mb-5 gradient-custom-text-blue  ">Get your <span
+                      style="color: pink;">free</span> video <span style="color:#ffc0cb;">horoscope</span> </h2>
+
+                  <div id="dateDiv" class="mb-4">
+                
+                    <input placeholder="Year, Month, Date, Time" id="date-of-birth-id" type="datetime-local"
+                      id="typeYearDateAndTime" class="form-control form-icon-trailing form-control-lg " />
+
+                  </div>
+
+                  <div id="placeDiv" class="mb-4">
+                   
+                    <input type="PlaceOnEarch" placeholder="Place of birth" id="typePlaceOnEarch"
+                      class="form-control form-icon-trailing form-control-lg" />
+
+                  </div>
+
+
+                  <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-4" type="submit"
+                    id="letsDoIt"><span class="white-text"> next
+
+                    </span></button>
+                </div>
+              </div>
+            </div>
+
+
+
+            <div style="background-color: black; border-radius: 1rem;" class="card" id="contact-info">
+              <div class="card-body p-5 text-center row justify-content-start">
+                <div class="my-md-3 pb-3 text-white">
+                  <!-- Title for the contact info -->
+               
+                  <!-- Address with FA icon -->
+                  <p><i class="fa fa-map-marker-alt"></i> Kibirdy</p>
+                  <p>Under Elmene 13, 5 tv.</p>
+                  <p> 2300 Copenhagen</p>
+                  <p>Denmark</p>
+
+                
+
+                  <!-- Phone number with FA icon -->
+                  <p class="text-white"><i class="fa fa-phone-alt"></i> +45 31658739</p>
+
+                  <!-- Email with FA icon -->
+                  <p><i class="fa fa-envelope"></i> kibirdykibirdy@gmail.com</p>
+               
+                  <button id="backBtnContact" class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-4">
+                  <span class="white-text"> Back </span>
+                </button>
+
+                </div>
+              </div>
+            </div>
+
+
+            <div style="background-color: black;" class="card" style="border-radius: 1rem;" id="user-data-confirm-box">
+              <div class="card-body p-5 d-flex flex-column justify-content-center align-items-center text-center">
+
+                <div id="confirm-data-to-continue" class="my-md-3 pb-3">
+
+                  <!-- Her kan du tilføje indhold -->
+
+
+
+                </div>
+
+                <img class="arrow" src="img/check-birth-place.png"></img>
+                <!-- Kortet -->
+                <div id="map" class="mb-3"></div>
+
+                <!-- Knapper -->
+                <div class="row w-100 justify-content-center">
+
+                  <div class="col-md-6 col-sm-12 mb-3 d-flex justify-content-center">
+                    <button class="btn btn-primary btn-lg btn-rounded gradient-custom text-body px-4" type="submit"
+                      id="createVideoBtn10">
+                      <span class="white-text">Create video</span>
+                    </button>
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+
+            <div id="loading-box" style="color:white; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+           
+                <div class="my-md-2 pb-5" id="logo-element" style="width: 60%; display: flex; flex-direction: column; align-items: center;">
+                  <img id="kibirdy-logo" class="fa-3x my-3 mb-3 logo" style="max-width: 100%;" src="img/kibirdy-logo-hvid.svg" />
+                  <!-- Progress bar moved outside the flex container -->
+                  <div id="myProgress" style="width: 100%; margin-top: 20px;">
+                    <div id="myBar"></div>
+                  </div>
+                </div>
+             
+              <!-- Video-element -->
+              <div class="responsive-video" id="video-element" style="margin-bottom: 10px;">
+                <!-- Videoindhold her -->
+              </div>
+            
+              <!-- Social Media Sektion -->
+              <div id="social-media" class="social-media-container">
+                <div style="text-align: center;">
+                  <!-- Titel for kontaktinformation -->
+                  <h6 class="social-media-banner text-size-social-banner">Download the <span style="color:pink">app </span>  it's <span style="color:pink">Awesome!</span></h6>
+            
+                  <!-- Flex-container til app store ikoner -->
+                  <div class="d-flex justify-content-center" style="gap: 15px;">
+                    <a href="https://www.apple.com/app-store/" target="_blank" class="social-icon store-icon">
+                      <i class="fab fa-apple small-icon"></i> <!-- Apple Store ikon -->
+                    </a>
+                    <a href="https://play.google.com/store" target="_blank" class="social-icon store-icon">
+                      <i class="fab fa-google-play small-icon"></i> <!-- Google Play Store ikon -->
+                    </a>
+                  </div>
+                </div>
+            
+                <h6 class="text-size-social-banner" style="text-align: center; margin-top: 10px;"><span style="color:pink">Share </span>for good <span style="color:pink">Karma!</span></h6>
+            
+                <!-- Sektion for sociale medier -->
+                <div class="social-media d-flex justify-content-center" style="gap: 15px;">
+                  <a id="instagram-share" href="https://www.instagram.com" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram fa-2x"></i>
+                  </a>
+                  <a id="facebook-share" href="https://www.facebook.com" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook fa-2x"></i>
+                  </a>
+                  <a id="tiktok-share" href="https://www.tiktok.com" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  </section>
+
+
+  <footer class="footer text-white p-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Contact Information -->
+
+      <h5 id="goToContact">Contact</h5>
+
+      <button class="btn btn-primary btn-lg gradient-custom text-body px-4" id="new-video" style="background:black;">
+        <span class="white-text"> New Video </span>
+      </button>
+
+    </div>
+  </footer>
+
+
+  <style>
+    .flatpickr-calendar {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/joi@17.9.2/dist/joi-browser.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/customJS.js"></script>
+  <!-- MDB -->
+ 
+  <!-- Googleapis -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC05HWxLRBpPNJFBa4svIFRwnc-d1mtwaw"></script>
+  <script src="https://player.vimeo.com/api/player.js"></script>
+
+
+
+</body>
+
+</html>

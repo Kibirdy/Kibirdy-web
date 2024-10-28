@@ -1,0 +1,31 @@
+{
+  "name": "astrogpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vimeo/player": "^2.24.0",
+    "@vimeo/vimeo": "^3.0.3",
+    "axios": "^1.7.7",
+    "bufferutil": "^4.0.8",
+    "express": "^4.21.1",
+    "ffprobe": "^1.1.2",
+    "ffprobe-static": "^3.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "mysql": "^2.18.1",
+    "node-fetch": "^2.7.0",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.8.0",
+    "utf-8-validate": "^5.0.10"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3"
+  }
+}
